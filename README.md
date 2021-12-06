@@ -12,7 +12,7 @@ Run tests as follows:
 ./gradlew test
 ```
 
-Specify argument <browser> `CHROME`, `EDGE` or `FIREFOX` and run tests as follows:
+Specify `<browser>` argument `CHROME`, `EDGE` or `FIREFOX` and run tests as follows:
 
 ```bash
 ./gradlew test -Dbrowser=<browser>
