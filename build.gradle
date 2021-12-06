@@ -23,5 +23,6 @@ test {
     useTestNG() {
         dependsOn cleanTest
         suites "src/test/resources/default.testng.xml"
+        systemProperty "browser", System.getProperty("browser", "CHROME")
     }
 }
