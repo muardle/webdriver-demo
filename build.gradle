@@ -19,4 +19,9 @@ dependencies {
     testImplementation 'org.testng:testng:7.4.0'
 }
 
-test {}
+test {
+    useTestNG() {
+        dependsOn cleanTest
+        suites "src/test/resources/default.testng.xml"
+    }
+}
