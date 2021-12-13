@@ -31,6 +31,7 @@ public class BasePage {
     }
 
     protected void deselectCheckbox(By locator) {
+        waitForElementToBePresent(locator);
         if (isSelected(locator)) {
             click(locator);
         }
@@ -59,15 +60,18 @@ public class BasePage {
 
     protected void selectByValue(By locator, String value) {
         Select select = new Select(findElement(locator));
+        waitForElementToBePresent(locator);
         select.selectByValue(value);
     }
 
     protected void selectByVisibleText(By locator, String value) {
         Select select = new Select(findElement(locator));
+        waitForElementToBePresent(locator);
         select.selectByVisibleText(value);
     }
 
     protected void selectCheckbox(By locator) {
+        waitForElementToBePresent(locator);
         if (!isSelected(locator)) {
             click(locator);
         }
